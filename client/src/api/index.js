@@ -1,11 +1,12 @@
 import axios from "axios";
 
-// http://localhost:8080/api/
+// ✅ Corrected Base URL
 const API = axios.create({
-  baseURL: "https://ai-image-generator-1-xl32.onrender.com/api/post",
+  baseURL: "https://ai-image-generator-1-xl32.onrender.com/api",
 });
 
-export const GetPosts = async () => await API.get("/post");
-export const CreatePost = async (data) => await API.post("/post", data);
+// ✅ Corrected Endpoints
+export const GetPosts = async () => await API.get("/post"); // GET all posts
+export const CreatePost = async (data) => await API.post("/post", data); // POST a new post
 export const GenerateImageFromPrompt = async (data) =>
-  await API.post("/generateImage", data);
+  await API.post("/generateImage", data); // POST request to generate an image
