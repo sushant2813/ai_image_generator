@@ -22,6 +22,7 @@ export const generateImage = async (req, res, next) => {
       n: 1,
       size: "1024x1024",
       response_format: "b64_json", // Requesting Base64 format
+      //aaaa
     });
 
     if (!response.data || response.data.length === 0) {
